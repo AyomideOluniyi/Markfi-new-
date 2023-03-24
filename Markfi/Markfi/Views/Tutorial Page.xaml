@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Markfi.Views.Tutorial_Page">
+    <ContentPage.Content>
+        <!--using a grid so that the tutorial page formats properly-->
+        <Grid>
+            <!--Setting up the format for the page-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Padding="20, 20, 20, 20" VerticalOptions="CenterAndExpand" HorizontalOptions="Fill">
+                <!--Welcome to the tutorial message-->
+                <Label Text="Welcome to the tutorial!"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Title"
+                    HeightRequest="64"/>
+
+                <Label Text="View Quizzes" FontSize="Large"/>
+                <Label Text="This app allows you to quiz yourself on a given topic. To access your quizzes, tap the menu option in the top left-hand corner of the screen and go to My Quizzes. This will allow you to view all the quiz packs that you have on your devices, as well as allow you to make new quizzes."/>
+                <Label Text=" "/>
+
+                <Label Text="View Progress" FontSize="Large"/>
+                <Label Text="To see your progress, tap the menu option and go to My Progress." />
+                <Label Text=" "/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
