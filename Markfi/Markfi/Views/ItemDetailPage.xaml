@@ -9,6 +9,18 @@
         <Label Text="{Binding Text}" FontSize="Small"/>
         <Label Text="Description:" FontSize="Medium" />
         <Label Text="{Binding Description}" FontSize="Small"/>
+        <Grid HeightRequest="400" Margin="20">
+            <Button Text="Option 1" Grid.Column="0"
+           Grid.Row="0"/>
+            <Button Text="Option 2"   Grid.Column="1"
+            Grid.Row="0"/>
+            <Button Text="Option 3"
+            Grid.Column="0"
+            Grid.Row="1"/>
+            <Button Text="Option 4"
+            Grid.Column="1"
+            Grid.Row="1"/>
+        </Grid>
     </StackLayout>
-    
+
 </ContentPage>
