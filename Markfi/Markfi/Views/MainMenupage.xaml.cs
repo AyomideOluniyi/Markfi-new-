@@ -13,7 +13,7 @@ namespace Markfi
         private async void StartQuizButton_Clicked(object sender, System.EventArgs e)
         {
             // Navigate to the Quiz list
-            await Navigation.PushAsync(new Quizzes_list());
+            await Navigation.PushAsync(new ItemsPage());
         }
 
         private async void LogoutButton_Clicked(object sender, System.EventArgs e)
