@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Markfi.Views.Other_Views.QuizQuestion">
+             x:Class="Markfi.Views.Questions">
     <ContentPage.Content>
         <StackLayout>
-            <Grid HeightRequest="400" Margin="20">
-                <Label Text="Here is the question"
+            <Label Text="Here is the question"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
                 FontSize="Large"/>
+            <Grid HeightRequest="400" Margin="20">
                 <Button Text="Option 1"
                     Grid.Column="0"
                     Grid.Row="0"/>
@@ -22,6 +22,6 @@
                     Grid.Column="1"
                     Grid.Row="1"/>
             </Grid>
-        </StackLayout>
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>
