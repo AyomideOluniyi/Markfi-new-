@@ -18,6 +18,12 @@
     <Compile Update="Views\Menu Options\Registrationpage.xaml.cs">
       <DependentUpon>Registrationpage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Menu Options\TutorialPage.xaml.cs">
+      <DependentUpon>TutorialPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Other Views\QuizQuestionButtons.xaml.cs">
+      <DependentUpon>QuizQuestionButtons.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -27,7 +33,10 @@
     <EmbeddedResource Update="Views\Other Views\IncorrectAnswer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Menu Options\Tutorial Page.xaml">
+    <EmbeddedResource Update="Views\Menu Options\TutorialPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Other Views\QuizQuestionButtons.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
