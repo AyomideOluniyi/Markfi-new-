@@ -10,20 +10,20 @@ namespace Markfi.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        private QuizListItem _selectedItem;
+        private Item _selectedItem;
 
-        public ObservableCollection<QuizListItem> Items { get; }
+        public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<QuizListItem> ItemTapped { get; }
+        public Command<Item> ItemTapped { get; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<QuizListItem>();
+            Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<QuizListItem>(OnItemSelected);
+            ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
         }
@@ -57,7 +57,7 @@ namespace Markfi.ViewModels
             SelectedItem = null;
         }
 
-        public QuizListItem SelectedItem
+        public Item SelectedItem
         {
             get => _selectedItem;
             set
@@ -72,7 +72,7 @@ namespace Markfi.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(QuizListItem item)
+        async void OnItemSelected(Item item)
         {
             if (item == null)
                 return;

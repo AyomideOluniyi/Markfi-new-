@@ -49,7 +49,7 @@ namespace Markfi.ViewModels
 
         private async void OnSave()
         {
-            QuizListItem newItem = new QuizListItem()
+            Item newItem = new Item()
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,

@@ -10,7 +10,7 @@ namespace Markfi.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<QuizListItem> DataStore => DependencyService.Get<IDataStore<QuizListItem>>();
+        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
         bool isBusy = false;
         public bool IsBusy
