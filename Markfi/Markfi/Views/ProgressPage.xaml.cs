@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Markfi.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TutorialPage : ContentPage
+	public partial class ProgressPage : ContentPage
 	{
-		public TutorialPage ()
+		public ProgressPage ()
 		{
 			InitializeComponent ();
 		}
