@@ -10,7 +10,7 @@ namespace Markfi.Views
 {
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public QuizListItem Item { get; set; }
 
         public NewItemPage()
         {

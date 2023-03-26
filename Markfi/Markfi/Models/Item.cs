@@ -2,7 +2,7 @@
 
 namespace Markfi.Models
 {
-    public class Item
+    public class QuizListItem
     {
         public string Id { get; set; }
         public string Text { get; set; }

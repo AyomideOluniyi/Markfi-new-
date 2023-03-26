@@ -24,15 +24,6 @@
     <Compile Update="Views\Other Views\QuizQuestionButtons.xaml.cs">
       <DependentUpon>QuizQuestionButtons.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\QuestionsPage2.xaml.cs">
-      <DependentUpon>QuestionsPage2.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\QuizQuestionButton2.xaml.cs">
-      <DependentUpon>QuizQuestionButton2.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\TutorialPage2.xaml.cs">
-      <DependentUpon>TutorialPage2.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -49,9 +40,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ProgressPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\QuestionsPage2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\QuestionsPageButtons.xaml">

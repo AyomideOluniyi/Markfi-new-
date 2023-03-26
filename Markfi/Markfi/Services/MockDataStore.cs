@@ -6,33 +6,46 @@ using Markfi.Models;
 
 namespace Markfi.Services
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockDataStore : IDataStore<QuizListItem>
     {
-        readonly List<Item> items;
+        readonly List<QuizListItem> items;
 
         public MockDataStore()
         {
-            items = new List<Item>()
+            items = new List<QuizListItem>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new QuizListItem {
+                    Id = Guid.NewGuid().ToString(),
+                    Text = "Over 65s Quiz",
+                    Description="Pack designed for users over the age of 65" },
+
+                new QuizListItem {
+                    Id = Guid.NewGuid().ToString(),
+                    Text = "Under 10s Pack",
+                    Description="Pack designed for users under the age of 10" },
+
+                new QuizListItem {
+                    Id = Guid.NewGuid().ToString(),
+                    Text = "TV and Film Pack",
+                    Description="Pack themed around TV and Film" },
+
+                new QuizListItem {
+                    Id = Guid.NewGuid().ToString(),
+                    Text = "Pop Culture and Movies Pack",
+                    Description="Pack designed around Pop Culture and Movies" }
             };
         }
 
-        public async Task<bool> AddItemAsync(Item item)
+        public async Task<bool> AddItemAsync(QuizListItem item)
         {
             items.Add(item);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateItemAsync(Item item)
+        public async Task<bool> UpdateItemAsync(QuizListItem item)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
+            var oldItem = items.Where((QuizListItem arg) => arg.Id == item.Id).FirstOrDefault();
             items.Remove(oldItem);
             items.Add(item);
 
@@ -41,18 +54,18 @@ namespace Markfi.Services
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
+            var oldItem = items.Where((QuizListItem arg) => arg.Id == id).FirstOrDefault();
             items.Remove(oldItem);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(string id)
+        public async Task<QuizListItem> GetItemAsync(string id)
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<QuizListItem>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
         }
