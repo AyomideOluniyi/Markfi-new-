@@ -1,18 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Markfi.Views.ProgressPage">
+             x:Class="Markfi.Views.ProgressPage"
+             Title="My Progress">
     <ContentPage.Content>
         <StackLayout>
-            <Grid HeightRequest="500">
-                <Label Text="My progress"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
-                    FontSize="60"
-                    BackgroundColor="{StaticResource Secondary}"
-                    TextColor="WhiteSmoke"
-                    Grid.Row="0"/>
-                <Label Text="You have completed x quizzes!"
+            <Grid HeightRequest="500" Padding="10">
+                <Label Text="You have completed X quizzes!"
                     Grid.Row="2"
                     FontSize="Medium"/>
                 <Label Text="Your top category is: "
