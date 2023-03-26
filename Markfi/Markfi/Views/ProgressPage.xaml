@@ -4,9 +4,24 @@
              x:Class="Markfi.Views.ProgressPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid HeightRequest="500">
+                <Label Text="My progress"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="60"
+                    BackgroundColor="{StaticResource Secondary}"
+                    TextColor="WhiteSmoke"
+                    Grid.Row="0"/>
+                <Label Text="You have completed x quizzes!"
+                    Grid.Row="2"
+                    FontSize="Medium"/>
+                <Label Text="Your top category is: "
+                    Grid.Row="3"
+                    FontSize="Medium"/>
+                <Label Text="Insert progress graph here"
+                    Grid.Row="4"
+                    FontSize="Medium"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

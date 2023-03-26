@@ -9,17 +9,8 @@
         <Label Text="{Binding Text}" FontSize="Small"/>
         <Label Text="Description:" FontSize="Medium" />
         <Label Text="{Binding Description}" FontSize="Small"/>
-        <Grid HeightRequest="400" Margin="20">
-            <Button Text="{Binding Button1}" Grid.Column="0"
-            Grid.Row="0"/>
-            <Button Text="{Binding Button2}" Grid.Column="1"
-            Grid.Row="0"/>
-            <Button Text="{Binding Button3}"
-            Grid.Column="0"
-            Grid.Row="1"/>
-            <Button Text="{Binding Button4}"
-            Grid.Column="1"
-            Grid.Row="1"/>
+        <Grid Margin="20">
+            <Button Text="Start Quiz"       Command="{Binding StartQuiz}"/>
         </Grid>
     </StackLayout>
 
