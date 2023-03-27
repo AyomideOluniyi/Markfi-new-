@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Markfi.Views.QuestionsPageButtons">
     <ContentPage.Content>
-        <StackLayout>
-            <Grid HeightRequest="400" Margin="20">
-                <Label Text="Here is the question"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="CenterAndExpand"
-                FontSize="Large"/>
+        <Grid>
+            <Label Text="Here is the question"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="Large"
+                Grid.Row="0"/>
+            <Grid Margin="20" Grid.Row="1">
                 <Button Text="Option 1"
                     Grid.Column="0"
                     Grid.Row="0"/>
@@ -22,6 +23,6 @@
                     Grid.Column="1"
                     Grid.Row="1"/>
             </Grid>
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
