@@ -5,12 +5,11 @@
              Title="{Binding Title}">
 
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
+        <Label Text="You have selected:" FontSize="Medium" />
         <Label Text="{Binding Text}" FontSize="Small"/>
-        <Label Text="Description:" FontSize="Medium" />
         <Label Text="{Binding Description}" FontSize="Small"/>
         <Grid Margin="20">
-            <Button Text="Start Quiz"       Command="{Binding StartQuiz}"/>
+            <Button Text="Start Quiz" Clicked="OnClick"/>
         </Grid>
     </StackLayout>
 
