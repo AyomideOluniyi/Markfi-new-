@@ -17,19 +17,6 @@ namespace Markfi.Views
 		public QuestionsPageButtons ()
 		{
 			InitializeComponent ();
-			BindingContext = new QuestionsPageButtons();
 		}
-
-		public string Question
-		{
-			get { return Question; }
-			set
-			{
-				Random rnd = new Random ();
-				int index = rnd.Next(0,3);
-				var temp = QuestionsStorage.Questions[0];
-				Question = temp[index];
-			}
-		}
-	}
+    }
 }
