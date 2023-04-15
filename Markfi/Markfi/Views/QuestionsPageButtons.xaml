@@ -4,7 +4,7 @@
              x:Class="Markfi.Views.QuestionsPageButtons">
     <ContentPage.Content>
         <Grid>
-            <Label Text="Here is the question"
+            <Label Text="{Binding Question}"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 FontSize="Large"
