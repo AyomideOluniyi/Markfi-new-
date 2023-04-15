@@ -34,6 +34,9 @@ namespace Markfi.Services
                     Text = "Pop Culture and Movies Pack",
                     Description="Pack designed around Pop Culture and Movies" }
             };
+
+            var questions = new List<string[]>();
+            // Store question packs here
         }
 
         public async Task<bool> AddItemAsync(Item item)

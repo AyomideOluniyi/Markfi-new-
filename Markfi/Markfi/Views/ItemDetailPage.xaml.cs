@@ -12,10 +12,10 @@ namespace Markfi.Views
             InitializeComponent();
             BindingContext = new ItemDetailViewModel();
         }
-        void OnClick(object sender, EventArgs e)
+        async void OnClick(object sender, EventArgs e)
         {
-            // Show loading screen
             // Load questions from file / database
+            await Navigation.PushAsync(new QuestionsPageButtons());
             // Make first question page
         }
     }
