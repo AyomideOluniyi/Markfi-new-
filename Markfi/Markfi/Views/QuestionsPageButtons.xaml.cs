@@ -26,19 +26,21 @@ namespace Markfi.Views
 			InitializeComponent ();
 
 			string QuestionString = "Test";
-
+			string FilePath = Directory.GetCurrentDirectory();
 			Random rnd = new Random ();
 
 			Question.Text = QuestionString;
 			if (CurrentQuiz == "Over 65s Quiz")
 			{
-				string[] Questions = File.ReadAllLines("TextFiles/Over65Questions");
+				FilePath = Path.Combine(FilePath, "\\Over65Questions.txt");
+				string[] Questions = File.ReadAllLines(FilePath);
 				QuestionString = Questions[rnd.Next(Questions.Length)];
-				// Open files
-				// Load data to arrays
-				// close files
-				// use random function to generate random question
-			}
+                Question.Text = QuestionString;
+                // Open files
+                // Load data to arrays
+                // close files
+                // use random function to generate random question
+            }
 		}
     }
 }
