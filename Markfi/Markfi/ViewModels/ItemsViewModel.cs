@@ -78,6 +78,17 @@ namespace Markfi.ViewModels
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
+
+            // Get selected quiz and store name under CurrentQuiz
+            QuestionsPageButtons.CurrentQuiz = item.Text;
+            // reset counter
+            QuestionsPageButtons.QuestionsCount = 0;
+
+            for (int i = 0; i < 5; i++)
+            {
+                QuestionsPageButtons.Indexes[i] = 0;
+            }
+
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
     }

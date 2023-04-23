@@ -13,21 +13,9 @@
                 HorizontalOptions="Center"
                 FontSize="Large"
                 Grid.Row="0"/>
-            <Grid Margin="20" Grid.Row="1">
-                <Button x:Name="Option1"
-                    Grid.Column="0"
-                    Grid.Row="0"/>
-                <Button x:Name="Option2"
-                    Grid.Column="1"
-                    Grid.Row="0"/>
-                <Button x:Name="Option3"
-                    Grid.Column="0"
-                    Grid.Row="1"/>
-                <Button x:Name="Option4"
-                    Grid.Column="1"
-                    Grid.Row="1"/>
-            </Grid>
-            <Label Text="" Grid.Row="2" Grid.RowSpan="1"/>
+            <Entry x:Name ="Input" Text="Test" Grid.Row="1"
+                   HeightRequest="10"
+                   BackgroundColor="Pink"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
