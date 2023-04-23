@@ -8,23 +8,22 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
-            <Label Text="{Binding Question}"
+            <Label x:Name="Question"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 FontSize="Large"
-                TextColor="Red"
                 Grid.Row="0"/>
             <Grid Margin="20" Grid.Row="1">
-                <Button Text="Option 1"
+                <Button x:Name="Option1"
                     Grid.Column="0"
                     Grid.Row="0"/>
-                <Button Text="Option 2"
+                <Button x:Name="Option2"
                     Grid.Column="1"
                     Grid.Row="0"/>
-                <Button Text="Option 3"
+                <Button x:Name="Option3"
                     Grid.Column="0"
                     Grid.Row="1"/>
-                <Button Text="Option 4"
+                <Button x:Name="Option4"
                     Grid.Column="1"
                     Grid.Row="1"/>
             </Grid>

@@ -7,16 +7,22 @@ namespace Markfi.ViewModels
 {
     public class QuestionsPageViewModel : BaseViewModel
     {
-        private string question;
         public string Question
         {
-            get { return question; }
-            set
+            get; set;
+        }
+        public QuestionsPageViewModel()
+        {
+            try
             {
                 Random rnd = new Random();
-                int index = rnd.Next(0, 3);
-                var temp = QuestionsStorage.Questions[0];
-                question = temp[index];
+                int index = rnd.Next(0, 2);
+                string[] temp = QuestionsStorage.Questions[0];
+                Question = temp[0];
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
