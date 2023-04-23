@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,23 +29,16 @@ namespace Markfi.Views
 
 			Random rnd = new Random ();
 
-			try
-			{
-				if (CurrentQuiz == "Over 65s Quiz")
-				{
-					// Open files
-					// Load data to arrays
-					// close files
-					// use random function to generate random question
-					QuestionString = "Over 65s";
-				}
-			} catch (Exception ex)
-			{
-				Debug.Write(ex.Message);
-			}
-
-
 			Question.Text = QuestionString;
+			if (CurrentQuiz == "Over 65s Quiz")
+			{
+				string[] Questions = File.ReadAllLines("TextFiles/Over65Questions");
+				QuestionString = Questions[rnd.Next(Questions.Length)];
+				// Open files
+				// Load data to arrays
+				// close files
+				// use random function to generate random question
+			}
 		}
     }
 }
