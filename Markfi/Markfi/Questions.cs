@@ -13,7 +13,7 @@ namespace Markfi
         "How many hours are there in a day?",
         "In 'The Jungle Book', what kind of animal is Baloo?",
         "How many colours are in the rainbow?",
-        "What are the three primary colours?",
+        "Which of these is not a primary colour: Red, Blue, Green, Yellow",
         "How many years are there in a millennium?",
         "Which is the largest planet in our solar system?",
         "Which planet has a ring of rocks and ice?",
@@ -38,7 +38,6 @@ namespace Markfi
         "What is the hardest naturally occurring substance available on earth?",
         "What do plants get from soil?",
         "What is the name of the process plants use to make their food?",
-
         };
     }
 }
