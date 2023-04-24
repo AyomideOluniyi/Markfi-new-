@@ -33,7 +33,17 @@ namespace Markfi.Views
 
 			if (CurrentQuiz == "Over 65s Quiz")
 			{
+				if (QuestionsCount == 6)
+				{
+					// DO NOT RUN QUESTIONS
+					// SHOW SCORE /5
+					// CLOSE QUESTIONSPAGE
+				}
 				int index = rnd.Next(Questions.Under10s.Length);
+				while (Indexes.Contains(index))
+				{
+					index = rnd.Next(Questions.Under10s.Length);
+                }
 				QuestionString = "Question " + QuestionsCount.ToString() + ": " + Questions.Under10s[index];
 				Question.Text = QuestionString;
 

@@ -82,7 +82,7 @@ namespace Markfi.ViewModels
             // Get selected quiz and store name under CurrentQuiz
             QuestionsPageButtons.CurrentQuiz = item.Text;
             // reset counter
-            QuestionsPageButtons.QuestionsCount = 0;
+            QuestionsPageButtons.QuestionsCount = 1;
 
             for (int i = 0; i < 5; i++)
             {
