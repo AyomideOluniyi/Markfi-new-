@@ -7,14 +7,14 @@
         <ViewModels:QuestionsPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid>
+        <Grid Padding="30">
             <Label x:Name="Question"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 FontSize="Large"
                 Grid.Row="0"/>
-            <Entry x:Name ="Input" Text="Test" Grid.Row="1"/>
-            <Grid Grid.Row="2" Margin="50">
+            <Entry x:Name ="Input" Text="My answer" Grid.Row="1"/>
+            <Grid Grid.Row="2">
                 <Button Text="Submit Answer" Clicked="CheckAnswer"/>
             </Grid>
         </Grid>
