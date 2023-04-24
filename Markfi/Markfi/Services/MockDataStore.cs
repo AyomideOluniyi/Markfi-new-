@@ -22,23 +22,31 @@ namespace Markfi.Services
             {
                 new Item {
                     Id = Guid.NewGuid().ToString(),
-                    Text = "Over 65s Quiz",
-                    Description="Pack designed for users over the age of 65" },
+                    Text = "Over 65s Pack",
+                    Description="Pack designed for users over the age of 65",
+                    TopScore=0
+                },
 
                 new Item {
                     Id = Guid.NewGuid().ToString(),
                     Text = "Under 10s Pack",
-                    Description="Pack designed for users under the age of 10" },
+                    Description="Pack designed for users under the age of 10",
+                    TopScore=0
+                },
 
                 new Item {
                     Id = Guid.NewGuid().ToString(),
                     Text = "TV and Film Pack",
-                    Description="Pack themed around TV and Film" },
+                    Description="Pack themed around TV and Film",
+                    TopScore = 0
+                },
 
                 new Item {
                     Id = Guid.NewGuid().ToString(),
                     Text = "Pop Culture and Movies Pack",
-                    Description="Pack designed around Pop Culture and Movies" }
+                    Description="Pack designed around Pop Culture and Movies",
+                    TopScore = 0
+                }
             };
         }
 

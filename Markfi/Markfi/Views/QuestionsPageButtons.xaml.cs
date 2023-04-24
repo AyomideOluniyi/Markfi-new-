@@ -45,7 +45,7 @@ namespace Markfi.Views
 			/*  This section of if statements make sure that the appropriate QuestionsList and AnswersList are loaded.
 			 *	For example, if the name of the quiz selected is Film and TV, this is the QuestionsList and AnswersList that should be loaded.
 			 *	Quiz packs are stored under the files Questions.cs and Answers.cs (as of 24.04.2023) because file handling is not going to plan */
-			if (CurrentQuiz == "Over 65s Quiz")
+			if (CurrentQuiz == "Over 65s Pack")
 			{
                 for (int i = 0; i < Questions.Over65s.Length; i++)
                 {
