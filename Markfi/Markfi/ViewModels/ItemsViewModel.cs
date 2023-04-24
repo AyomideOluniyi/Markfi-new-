@@ -14,7 +14,9 @@ namespace Markfi.ViewModels
 
         public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
-        public Command AddItemCommand { get; }
+
+
+        //public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
         public ItemsViewModel()
@@ -25,7 +27,7 @@ namespace Markfi.ViewModels
 
             ItemTapped = new Command<Item>(OnItemSelected);
 
-            AddItemCommand = new Command(OnAddItem);
+            //AddItemCommand = new Command(OnAddItem);
         }
 
         async Task ExecuteLoadItemsCommand()
