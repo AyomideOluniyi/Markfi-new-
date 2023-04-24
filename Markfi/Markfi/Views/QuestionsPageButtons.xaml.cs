@@ -33,7 +33,7 @@ namespace Markfi.Views
 		public static int CorrectCount = 0, IncorrectCount = 0;
 		public static int[] Indexes = new int[5];
 		public static int CurrentIndex;
-		public static string QuestionString = "Questions";
+		public static string QuestionString;
 		public static string AnswerString;
 		public static List<String> QuestionsList = new List<String> ();
 		public static List<String> AnswersList = new List<String> ();

@@ -72,23 +72,28 @@ namespace Markfi.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
+        /*
+         * OnItemSelected() was an auto-generated function that came with the template. However, it has been adapted to work with Quizzes instead of
+         * just the data store that it was previously using. The function now also does the following:
+         *
+         * - Store the name of the selected quiz pack under QuestionsPageButtons.CurrentQuiz
+         * - Reset all relevant counters, trackers, et cetera for QuestionsPageButtons
+         */
         async void OnItemSelected(Item item)
         {
             if (item == null)
                 return;
 
-            // This will push the ItemDetailPage onto the navigation stack
-
-            // Get selected quiz and store name under CurrentQuiz
             QuestionsPageButtons.CurrentQuiz = item.Text;
-            // reset counter
-            QuestionsPageButtons.QuestionsCount = 1;
-
+            QuestionsPageButtons.CorrectCount = 0;
+            QuestionsPageButtons.IncorrectCount = 0;
+            QuestionsPageButtons.CurrentIndex = 0;
             for (int i = 0; i < 5; i++)
             {
                 QuestionsPageButtons.Indexes[i] = 0;
             }
 
+            // This will push the ItemDetailPage onto the navigation stack
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
     }
