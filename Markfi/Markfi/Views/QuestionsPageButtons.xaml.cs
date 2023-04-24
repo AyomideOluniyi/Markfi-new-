@@ -85,18 +85,29 @@ namespace Markfi.Views
 
 		public void GenerateQuestions(List<string> questions, List<string> answers)
 		{
-			// Random function to generate random indexes for questions
-			Random rnd = new Random();
+			if (CorrectCount + IncorrectCount == 5)
+			{
+				EndQuiz();
+			}
+			else
+			{
+				Random rnd = new Random();
 
-			do {
-				CurrentIndex = rnd.Next(questions.Count);
-			} while (Indexes.Contains(CurrentIndex));
+				do {
+					CurrentIndex = rnd.Next(questions.Count);
+				} while (Indexes.Contains(CurrentIndex));
 
-			int QuestionsCount = CorrectCount + IncorrectCount + 1;
-            Indexes[QuestionsCount - 1] = CurrentIndex;
-            QuestionString = "Question " + QuestionsCount.ToString() + ": " + questions[CurrentIndex];
-            AnswerString = answers[CurrentIndex];
-            Question.Text = QuestionString;
+				int QuestionsCount = CorrectCount + IncorrectCount + 1;
+				Indexes[QuestionsCount - 1] = CurrentIndex;
+				QuestionString = "Question " + QuestionsCount.ToString() + ": " + questions[CurrentIndex];
+				AnswerString = answers[CurrentIndex];
+				Question.Text = QuestionString;
+			}
         }
+
+		private async void EndQuiz()
+		{
+			await Navigation.PushAsync(new EndOfQuizPage());
+		}
     }
 }
