@@ -22,7 +22,7 @@ namespace Markfi.Views
 		/*
 		 *	Global variables are as follows:
 		 *	CurrentQuiz stores the loaded quiz so that the relevant quiz pack is loaded
-		 *	QuestionsCount stores the question number so that the quiz produces exactly 5 questions
+		 *	CorrectCount and IncorrectCount store number of correctly and incorrectly answered questions respectively
 		 *	Indexes[] stores the index of each question asked so that the same question is not asked more than once in each quiz
 		 *	CurrentIndex stores the index of the question and answer currently being asked
 		 *	QuestionString and AnswerString store the question and answer string currently being asked
@@ -30,7 +30,7 @@ namespace Markfi.Views
 		 */
 
 		public static string CurrentQuiz;
-		public static int QuestionsCount;
+		public static int CorrectCount = 0, IncorrectCount = 0;
 		public static int[] Indexes = new int[5];
 		public static int CurrentIndex;
 		public static string QuestionString = "Questions";
@@ -42,48 +42,45 @@ namespace Markfi.Views
 		{
 			InitializeComponent ();
 
-			/*
-			 *	This section of if statements make sure that the appropriate QuestionsList and AnswersList are loaded.
-			 *	For example, if the name of the quiz selected is film and tv, this is the QuestionsList and AnswersList that should be loaded.
-			 *	Quiz packs are stored under the files Questions.cs and Answers.cs (as of 24.04.2023) because file handling is not going to plan.
-			 */
+			/*  This section of if statements make sure that the appropriate QuestionsList and AnswersList are loaded.
+			 *	For example, if the name of the quiz selected is Film and TV, this is the QuestionsList and AnswersList that should be loaded.
+			 *	Quiz packs are stored under the files Questions.cs and Answers.cs (as of 24.04.2023) because file handling is not going to plan */
 			if (CurrentQuiz == "Over 65s Quiz")
+			{
+
+            }
+
+			if (CurrentQuiz == "Under 10s Pack")
 			{
 				for (int i = 0; i < Questions.Under10s.Length; i++)
 				{
 					QuestionsList.Add(Questions.Under10s[i]);
 					AnswersList.Add(Answers.Under10s[i]);
 				}
-            }
+			}
 			GenerateQuestions(QuestionsList, AnswersList);
 		}
 
-		/*
-		*	The process of CheckAnswer is as follows:
-		*	1. Increment QuestionsCount so that the quiz isn't repeated forever (or hypothetically until the user runs out of questions)
-		*	2. Compare Input.Text (this is the input provided by the user in the Entry under QuestionsPageButtons.xaml) with the GLOBAL variable
-		*	   AnswerString. AnswerString and QuestionString are global so that they can be used here.
-		*	3. a. If the input is the correct answer: Display the CorrectAnswer page
-		*	3. b. Else: Display the IncorrectAnswer page
-		*	4. Regardless of whether or not the user answered the question right, wait 1000ms (1 second) then pop the page. This will take the user
-		*	   back to the questions.
-		*	5. Generate the next question using the GenerateQuestions() function.
-		*/
+		/*  The process of CheckAnswer is as follows:
+		 *	1. Increment QuestionsCount so that the quiz isn't repeated forever (or hypothetically until the user runs out of questions)
+		 *	2. Compare Input.Text (this is the input provided by the user in the Entry under QuestionsPageButtons.xaml) with the GLOBAL variable
+		 *	   AnswerString. AnswerString and QuestionString are global so that they can be used here.
+		 *	3. a. If the input is the correct answer: Display the CorrectAnswer page
+		 *	3. b. Else: Display the IncorrectAnswer page
+		 *	4. From the CorrectAnswer or IncorrectAnswer page, the user selects a button to continue to the next question. This allows the user to
+		 *	   progress at their own pace. */
         private async void CheckAnswer(object sender, EventArgs e)
         {
-			QuestionsCount++;
 			if (Input.Text == AnswerString)
 			{
 				await Navigation.PushAsync(new CorrectAnswer());
+				CorrectCount++;
 			}
 			else
 			{
 				await Navigation.PushAsync(new IncorrectAnswer());
+				IncorrectCount++;
 			}
-
-			Thread.Sleep(1000);
-			await Navigation.PopAsync();
-			GenerateQuestions(QuestionsList, AnswersList);
         }
 
 		public void GenerateQuestions(List<string> questions, List<string> answers)
@@ -95,6 +92,7 @@ namespace Markfi.Views
 				CurrentIndex = rnd.Next(questions.Count);
 			} while (Indexes.Contains(CurrentIndex));
 
+			int QuestionsCount = CorrectCount + IncorrectCount + 1;
             Indexes[QuestionsCount - 1] = CurrentIndex;
             QuestionString = "Question " + QuestionsCount.ToString() + ": " + questions[CurrentIndex];
             AnswerString = answers[CurrentIndex];
