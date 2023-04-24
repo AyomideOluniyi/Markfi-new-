@@ -13,9 +13,10 @@
                 HorizontalOptions="Center"
                 FontSize="Large"
                 Grid.Row="0"/>
-            <Entry x:Name ="Input" Text="Test" Grid.Row="1"
-                   HeightRequest="10"
-                   BackgroundColor="Pink"/>
+            <Entry x:Name ="Input" Text="Test" Grid.Row="1"/>
+            <Grid Grid.Row="2" Margin="50">
+                <Button Text="Submit Answer" Clicked="CheckAnswer"/>
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

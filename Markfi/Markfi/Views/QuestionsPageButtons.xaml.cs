@@ -21,26 +21,49 @@ namespace Markfi.Views
 		public static string CurrentQuiz;
 		public static int QuestionsCount;
 		public static int[] Indexes = new int[5];
+
 		public QuestionsPageButtons ()
 		{
 			InitializeComponent ();
 
-			string QuestionString = "Test";
-			string FilePath = Directory.GetCurrentDirectory();
-			Random rnd = new Random ();
+			string QuestionString;
 
-			Question.Text = QuestionString;
+			// Get generic file path for Over 65s Quiz Question file
+			string FilePath = Directory.GetCurrentDirectory();
+
+			// Random function to generate random indexes for questions
+			Random rnd = new Random();
+
 			if (CurrentQuiz == "Over 65s Quiz")
 			{
-				FilePath = Path.Combine(FilePath, "\\Over65Questions.txt");
-				string[] Questions = File.ReadAllLines(FilePath);
-				QuestionString = Questions[rnd.Next(Questions.Length)];
-                Question.Text = QuestionString;
-                // Open files
-                // Load data to arrays
-                // close files
-                // use random function to generate random question
+				try
+				{
+					// Combine the current directory with the relevant file
+					FilePath = Path.Combine(FilePath, "Over65Questions.txt");
+
+					// Read file contents
+					string[] Questions = File.ReadAllLines(FilePath);
+
+					// Set question in .xaml
+					QuestionString = Questions[rnd.Next(Questions.Length)];
+					Question.Text = QuestionString;
+
+
+					// Open files
+					// Load data to arrays
+					// close files
+					// use random function to generate random question
+				}
+				catch (Exception ex)
+				{
+					Debug.WriteLine(ex.Message);
+				}
             }
 		}
+
+        private void CheckAnswer(object sender, EventArgs e)
+        {
+
+        }
     }
 }
