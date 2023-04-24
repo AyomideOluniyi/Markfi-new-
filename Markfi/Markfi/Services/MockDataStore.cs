@@ -8,6 +8,12 @@ namespace Markfi.Services
 {
     public class MockDataStore : IDataStore<Item>
     {
+        /*
+         * MockDataStore has been modified to store quiz pack information. This is so that it works with ItemsViewModel. ItemsViewModel then allows
+         * the packs to be displayed and lets the user select from the list of packs. It also provides the option for the user to create their own
+         * packs, although this function will need to be modified to store a set of questions. Question and Answer packs are NOT stored here, instead
+         * pack titles and descriptions are.
+         */
         readonly List<Item> items;
 
         public MockDataStore()
