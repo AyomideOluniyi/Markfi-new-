@@ -40,5 +40,35 @@ namespace Markfi
             "Minerals",
             "Photosynthesis"
         };
+
+        public static string[] Over65s =
+        {
+            "Blank",
+            "eBay",
+            "France",
+            "Exam",
+            "Origami",
+            "Hoof",
+            "Kilt",
+            "Skating",
+            "Forrest Gump",
+            "John Wayne",
+            "James Bond",
+            "Microsoft",
+            "Aluminum",
+            "Irish sea",
+            "Mosquitoes",
+            "Anchovy",
+            "Martin Luther King Junior",
+            "Turkey",
+            "Physics",
+            "10080",
+            "Murder",
+            "Sweden",
+            "Yellow",
+            "O negative",
+            "Bell",
+            "Echo"
+        };
     }
 }

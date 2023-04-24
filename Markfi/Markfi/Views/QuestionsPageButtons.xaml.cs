@@ -47,7 +47,11 @@ namespace Markfi.Views
 			 *	Quiz packs are stored under the files Questions.cs and Answers.cs (as of 24.04.2023) because file handling is not going to plan */
 			if (CurrentQuiz == "Over 65s Quiz")
 			{
-
+                for (int i = 0; i < Questions.Over65s.Length; i++)
+                {
+                    QuestionsList.Add(Questions.Over65s[i]);
+                    AnswersList.Add(Answers.Over65s[i]);
+                }
             }
 
 			if (CurrentQuiz == "Under 10s Pack")
