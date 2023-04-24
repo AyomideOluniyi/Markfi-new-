@@ -15,7 +15,8 @@
                 FontSize="Medium"/>
             <Button Text="Continue"
                 VerticalOptions="CenterAndExpand"
-                BackgroundColor="#0287C3"/>
+                BackgroundColor="#0287C3"
+                Clicked="OnClick"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
