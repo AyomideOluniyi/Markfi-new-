@@ -23,14 +23,12 @@ namespace Markfi.Views
 		public static int QuestionsCount;
 		public static int[] Indexes = new int[5];
 		public static int CurrentIndex;
-		public static string QuestionString;
+		public static string QuestionString = "Questions";
 		public static string AnswerString;
 
 		public QuestionsPageButtons ()
 		{
 			InitializeComponent ();
-
-			QuestionString = "Questions";
 
 			// Random function to generate random indexes for questions
 			Random rnd = new Random();
@@ -43,15 +41,7 @@ namespace Markfi.Views
 					// SHOW SCORE /5
 					// CLOSE QUESTIONSPAGE
 				}
-				CurrentIndex = rnd.Next(Questions.Under10s.Length);
-				while (Indexes.Contains(CurrentIndex))
-				{
-					CurrentIndex = rnd.Next(Questions.Under10s.Length);
-                }
-				Indexes[QuestionsCount-1] = CurrentIndex;
-				QuestionString = "Question " + QuestionsCount.ToString() + ": " + Questions.Under10s[CurrentIndex];
-				AnswerString = Answers.Under10s[CurrentIndex];
-				Question.Text = QuestionString;
+				GenerateQuestions(Questions.Under10s, Answers.Under10s);
             }
 		}
 
@@ -76,6 +66,18 @@ namespace Markfi.Views
 				}
 
 			}
+        }
+
+		public void GenerateQuestions(string[] questions, string[] answers)
+		{
+			do {
+				CurrentIndex = rnd.Next(questions.Length);
+			} while (Indexes.Contains(CurrentIndex));
+
+            Indexes[QuestionsCount - 1] = CurrentIndex;
+            QuestionString = "Question " + QuestionsCount.ToString() + ": " + questions[CurrentIndex];
+            AnswerString = answers[CurrentIndex];
+            Question.Text = QuestionString;
         }
     }
 }
