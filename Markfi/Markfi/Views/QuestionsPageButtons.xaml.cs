@@ -87,6 +87,16 @@ namespace Markfi.Views
 			}
         }
 
+		/*
+		 * GenerateQuestions() is a function that takes a list of questions and answers as parameters. The process of GenerateQuestions() is
+		 * as follows:
+		 * 1. a. If the user has answered a total of 5 questions:
+		 *			Call the EndQuiz() function to end the quiz
+		 * 1. b. Else:
+		 *			Generate a random index
+		 *			If this index has already been used in this quiz, generate a new index until one is generated that hasn't already been used.
+		 *			Store the generated index
+		 */
 		public void GenerateQuestions(List<string> questions, List<string> answers)
 		{
 			if (CorrectCount + IncorrectCount == 5)
