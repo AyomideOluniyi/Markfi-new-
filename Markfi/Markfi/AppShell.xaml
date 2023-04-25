@@ -87,9 +87,6 @@
     <FlyoutItem Title="Tutorial">
         <ShellContent Route="TutorialPage" ContentTemplate="{DataTemplate local:TutorialPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Test">
-        <ShellContent Route="QuestionsPageButtons" ContentTemplate="{DataTemplate local:QuestionsPageButtons}" />
-    </FlyoutItem>
     <FlyoutItem Title="My Progress">
         <ShellContent Route="ProgressPage" ContentTemplate="{DataTemplate local:ProgressPage}"/>
     </FlyoutItem>
