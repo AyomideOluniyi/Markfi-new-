@@ -70,5 +70,40 @@ namespace Markfi
             "What name is given to a metal cup with a clapper hanging inside it?",
             "If you yell into a valley, the sound will bounce and you may hear it several times at a lower volume. What is this known as?"
         };
+
+        public static string[] TVFilm =
+        {
+            "What colour pill does Neo take in the Matrix?",
+            "Who kills Neo in the Matrix?",
+            "What is the name of the second film in the Hunger Games series?",
+            "Finish the famous phrase from The Mockingjay: 'If we burn, ...'",
+            "Who was not chosen to participate in the 75th Hunger Games, but volunteered as tribute instead? Enter their first name AND surname",
+            "Who is killed in battle in WW2 in The Notebook?",
+            "Donkey and which other character save Shrek and Fiona at the end of the first Shrek film?",
+            "What colour was Luke Skywalker's original Lightsaber?",
+            "Who says the famous phrase 'No. I am your father' in Star Wars? State their alias rather than their true name.",
+            "Who falls to their death in Avengers: Endgame? Give their alias rather than their birth name.",
+            "Who says the famous line 'We're in the end game now'? Give their alias rather than their birth name.",
+            "What does Rose lay on when the Titanic sinks?",
+            "What does Rose throw into the ocean at the end of Titanic?",
+            "What name do the players have to shout at the end of Jumanji: Welcome to the Jungle to win the game?",
+            "What is Martha's only weakness when she plays as Ruby Roundhouse?",
+            "What is the name of the first building that 'the gang' try to rob in La Casa de Papel (The Money Heist)?",
+            "What is the professor's forename in La Casa de Papel (The Money Heist)?",
+            "In the first scene of La Casa de Papel (The Money Heist) part 3, who gives a speech about the heist performed in the previous two parts? Give their first name ONLY",
+            "Where did Sheldon grow up in The Big Bang Theory?",
+            "What is the first line of The Big Bang Theory's theme tune?",
+            "What is Penny's job at the start of The Big Bang Theory?",
+            "What is the name of the cafe in Friends that the main characters of the show will normally go to?",
+            "What is Joey's job in Friends?",
+            "Where is Friends set?",
+            "How does Krusty the Clown greet his audience in The Simpsons?",
+            "What is the first name of Mr Burns' Executive Assistant in The Simpsons?",
+            "Who is the first named character to die in the Upside Down in Stranger Things?",
+            "Who in Breaking Bad says the famous line 'I am not in danger, Skyler; I am the danger!'",
+            "Bromine and which other element are used to form the Breaking Bad logo?",
+            "What is the name of Walter and Skylar's second child in Breaking Bad?",
+            "Approximately how long is Walter told he has to live in the first episode of Breaking Bad?"
+        };
     }
 }

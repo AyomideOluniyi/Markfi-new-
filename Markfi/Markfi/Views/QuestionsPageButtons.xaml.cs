@@ -62,6 +62,15 @@ namespace Markfi.Views
 					AnswersList.Add(Answers.Under10s[i]);
 				}
 			}
+
+			if (CurrentQuiz == "TV and Film Pack")
+			{
+                for (int i = 0; i < Questions.TVFilm.Length; i++)
+                {
+                    QuestionsList.Add(Questions.TVFilm[i]);
+                    AnswersList.Add(Answers.TVFilm[i]);
+                }
+            }
 			GenerateQuestions(QuestionsList, AnswersList);
 		}
 
