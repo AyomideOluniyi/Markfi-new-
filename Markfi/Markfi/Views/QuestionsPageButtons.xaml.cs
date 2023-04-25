@@ -41,6 +41,8 @@ namespace Markfi.Views
 		public QuestionsPageButtons ()
 		{
 			InitializeComponent ();
+			QuestionsList.Clear();
+			AnswersList.Clear();
 
 			/*  This section of if statements make sure that the appropriate QuestionsList and AnswersList are loaded.
 			 *	For example, if the name of the quiz selected is Film and TV, this is the QuestionsList and AnswersList that should be loaded.
@@ -71,6 +73,15 @@ namespace Markfi.Views
                     AnswersList.Add(Answers.TVFilm[i]);
                 }
             }
+
+			if (CurrentQuiz == "Pop Culture and Movies Pack")
+			{
+				for (int i = 0; i < Questions.PopCulture.Length; i++)
+				{
+					QuestionsList.Add(Questions.PopCulture[i]);
+					AnswersList.Add(Answers.PopCulture[i]);
+				}
+			}
 			GenerateQuestions(QuestionsList, AnswersList);
 		}
 

@@ -105,5 +105,39 @@ namespace Markfi
             "Holly",
             "2 years"
         };
+
+        public static string[] PopCulture =
+        {
+            "Robert Downey Junior",
+            "Justin Bieber",
+            "Friends",
+            "Parasite",
+            "Harry Potter",
+            "Jennifer Lawrence",
+            "Titanic",
+            "George Lucas",
+            "Adventure Time",
+            "Madonna",
+            "Reece Witherspoon",
+            "Led Zeppelin",
+            "The Office",
+            "Toy Story",
+            "Michael Jackson",
+            "Daniel Craig",
+            "Backstreet Boys",
+            "Britney Spears",
+            "Finding Nemo",
+            "The Walking Dead",
+            "Back to the Future",
+            "Lady Gaga",
+            "James Gandolfini",
+            "Chris Martin",
+            "Grey's Anatomy",
+            "Ocean's Eleven",
+            "Taylor Swift",
+            "Heath Ledger",
+            "Saved by the Bell",
+            "Toy Story"
+        };
     }
 }

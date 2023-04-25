@@ -105,5 +105,39 @@ namespace Markfi
             "What is the name of Walter and Skylar's second child in Breaking Bad?",
             "Approximately how long is Walter told he has to live in the first episode of Breaking Bad?"
         };
+
+        public static string[] PopCulture =
+        {
+            "Who played the character Iron Man in the Marvel Cinematic Universe?",
+            "Which Canadian musicial is known for his hit singles 'Sorry' and 'Love Yourself'?",
+            "Which 90s sitcom features six friends living in New York City?",
+            "Who won the Best Picture award at the 2020 Oscars?",
+            "What is the name of the main character in the Harry Potter series?",
+            "Which actress played the role of Katniss Everdeen in The Hunger Games movies?",
+            "Which movie features the song 'My Heart Will Go On' by Celine Dion?",
+            "Who is the creator of the Star Wars franchise?",
+            "Which animated TV show follows the adventures of a young boy and his dog in a post-apocalyptic adventure world?",
+            "Which pop star is known as the 'Queen of Pop'?",
+            "Which actress played the role of Elle Woods in the Legally Blonde movies?",
+            "Which band is known for their hit song 'Stairway to Heaven'?",
+            "Which TV show features a fictional paper company called Dunder Mifflin?",
+            "Which movie features the characters Woody and Buzz Lightyear?",
+            "Which pop star is known as the 'King of Pop'?",
+            "Which actor played the character of James Bond in the movie 'Skyfall'?",
+            "Which 90s boy band had members named AJ, Brian, Howie, Kevin and Nick?",
+            "Which pop star is known as the 'Princess of Pop'?",
+            "Which movie is about a clownfish searching for his son with the help of a forgetful fish?",
+            "Which TV show features a group of survivors trying to survive a zombie apocalypse?",
+            "Which movie features a time-travelling DeLorean and a scientist named Doc Brown?",
+            "Which pop star is known for her hit songs 'Bad Romance' and 'Poker Face'?",
+            "Which actor played the character of Tony Soprano in the TV show 'The Sopranos'?",
+            "Who is the lead singer of the band Coldplay?",
+            "Which TV show follows the lives of a group of doctors at Seattle Grace Hospital?",
+            "Which movie features a group of characters trying to steal a valuable diamond from a casino?",
+            "Which pop star is known for her hit songs 'Shake It Off' and 'Blank Space'?",
+            "Which actor played the character of the Joker in the movie 'The Dark Night'?",
+            "Which 90s sitcom featured a group of teenagers in high school and their principal?",
+            "Which movie is about a group of toys that come to life when their owner is not around?"
+        };
     }
 }
