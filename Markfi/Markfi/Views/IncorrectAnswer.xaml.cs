@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,7 @@ namespace Markfi.Views
 		public IncorrectAnswer ()
 		{
 			InitializeComponent ();
+			Message.Text = "Unfortunately, the correct answer was: "+QuestionsPageButtons.AnswerString +"\nDisplay motivational message here!";
 		}
         private async void OnClick(object sender, EventArgs e)
         {
