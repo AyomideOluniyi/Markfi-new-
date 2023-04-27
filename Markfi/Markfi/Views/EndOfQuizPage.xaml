@@ -6,10 +6,19 @@
         <StackLayout>
             <Label Text="Congratulations! You have completed the quiz."
                 VerticalOptions="CenterAndExpand"
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"
+                Padding="20"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                BackgroundColor="{StaticResource Secondary}"
+                HeightRequest="150"
+                VerticalTextAlignment="Center"
+                />
             <Label x:Name="QuizMessage"
                 VerticalOptions="CenterAndExpand"
-                HorizontalOptions="CenterAndExpand"/>
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Medium"/>
             <Button Text="Back to main menu" Clicked="OnClick"/>
         </StackLayout>
     </ContentPage.Content>
