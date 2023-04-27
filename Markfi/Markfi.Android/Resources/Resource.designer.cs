@@ -16532,10 +16532,13 @@ namespace Markfi.Droid
 			public const int design_snackbar_background = 2131165283;
 			
 			// aapt resource value: 0x7F07006B
-			public const int icon_about = 2131165291;
+			public const int icon = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int icon_feed = 2131165292;
+			public const int icon_about = 2131165292;
+			
+			// aapt resource value: 0x7F07006D
+			public const int icon_feed = 2131165293;
 			
 			// aapt resource value: 0x7F070064
 			public const int ic_arrow_down_24dp = 2131165284;
@@ -16557,9 +16560,6 @@ namespace Markfi.Droid
 			
 			// aapt resource value: 0x7F07006A
 			public const int ic_mtrl_chip_close_circle = 2131165290;
-			
-			// aapt resource value: 0x7F07006D
-			public const int MarkFi_logo = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
 			public const int material_cursor_drawable = 2131165294;
@@ -18796,10 +18796,7 @@ namespace Markfi.Droid
 			public const int icon = 2131492864;
 			
 			// aapt resource value: 0x7F0C0001
-			public const int icon_round = 2131492865;
-			
-			// aapt resource value: 0x7F0C0002
-			public const int launcher_foreground = 2131492866;
+			public const int launcher_foreground = 2131492865;
 			
 			static Mipmap()
 			{
