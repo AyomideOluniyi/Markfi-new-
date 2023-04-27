@@ -8,7 +8,7 @@
                 VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                 TextColor="WhiteSmoke"
                 FontSize="85"/>
-            <Label Text="Display randomly generated motivational message here!"
+            <Label x:Name="CorrectMessage"
                 VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                 TextColor="WhiteSmoke" HorizontalTextAlignment="Center"
                 FontSize="Medium"/>

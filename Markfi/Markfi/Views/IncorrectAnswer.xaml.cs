@@ -16,7 +16,9 @@ namespace Markfi.Views
 		public IncorrectAnswer ()
 		{
 			InitializeComponent ();
-			Message.Text = "Unfortunately, the correct answer was: "+QuestionsPageButtons.AnswerString +"\nDisplay motivational message here!";
+			Random rnd = new Random ();
+			Message.Text = MotivationalMessages.IncorrectMessages[rnd.Next(0, MotivationalMessages.IncorrectMessages.Length)];
+			Message.Text += "Unfortunately, the correct answer was: " +QuestionsPageButtons.AnswerString;
 		}
         private async void OnClick(object sender, EventArgs e)
         {

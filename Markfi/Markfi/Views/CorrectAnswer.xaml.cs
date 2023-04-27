@@ -14,7 +14,8 @@ namespace Markfi.Views
 	{
 		public CorrectAnswer ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
+            CorrectMessage.Text = "Well done! That was the correct answer!";
 		}
 
         private async void OnClick(object sender, EventArgs e)

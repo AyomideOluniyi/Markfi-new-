@@ -95,7 +95,7 @@ namespace Markfi.Views
 		 *	   progress at their own pace. */
         private async void CheckAnswer(object sender, EventArgs e)
         {
-			if (Input.Text == AnswerString)
+			if (Input.Text.ToUpper() == AnswerString.ToUpper())
 			{
 				await Navigation.PushAsync(new CorrectAnswer());
 				CorrectCount++;

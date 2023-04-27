@@ -15,8 +15,7 @@ namespace Markfi.Views
         public EndOfQuizPage()
         {
             InitializeComponent();
-            string message = "Congratulations! You have completed this quiz. Your overall score was: " + QuestionsPageButtons.CorrectCount.ToString() + " out of 5!";
-
+            string message = "Your overall score was: " + QuestionsPageButtons.CorrectCount.ToString() + " out of 5!";
             QuizMessage.Text = message;
         }
 
