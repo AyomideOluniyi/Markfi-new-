@@ -3,19 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Markfi.Views.IncorrectAnswer">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#02557A">
+        <StackLayout BackgroundColor="#e9190f">
             <Label Text="Incorrect!"
                 VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
-                TextColor="WhiteSmoke"
+                TextColor="WhiteSmoke" FontAttributes="Bold"
                 FontSize="85"
                 />
             <Label x:Name="Message"
                 VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                 TextColor="WhiteSmoke" HorizontalTextAlignment="Center"
-                FontSize="Medium"/>
+                FontSize="28" FontAttributes="Italic"
+                Margin="20"/>
             <Button Text="Continue"
                 VerticalOptions="CenterAndExpand"
-                BackgroundColor="#0287C3"
+                BackgroundColor="#a2120a"
+                FontSize="20"
+                Margin="20"
                 Clicked="OnClick"/>
         </StackLayout>
     </ContentPage.Content>
