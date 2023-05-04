@@ -7,7 +7,7 @@
             <Label Text="Correct!"
                 VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                 TextColor="WhiteSmoke" FontAttributes="Bold"
-                FontSize="85"/>
+                FontSize="64"/>
             <Label x:Name="CorrectMessage"
                 VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                 TextColor="WhiteSmoke" HorizontalTextAlignment="Center"
