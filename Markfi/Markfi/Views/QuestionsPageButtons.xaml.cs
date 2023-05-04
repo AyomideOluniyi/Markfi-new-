@@ -95,7 +95,7 @@ namespace Markfi.Views
 		 *	   progress at their own pace. */
         private async void CheckAnswer(object sender, EventArgs e)
         {
-			if (Input.Text.ToUpper() == AnswerString.ToUpper())
+			if (ConvertAnswer(Input.Text) == AnswerString.ToUpper())
 			{
 				await Navigation.PushAsync(new CorrectAnswer());
 				CorrectCount++;
@@ -143,6 +143,14 @@ namespace Markfi.Views
 		private async void EndQuiz()
 		{
 			await Navigation.PushAsync(new EndOfQuizPage());
+		}
+
+		public string ConvertAnswer(string answer)
+		{
+			if (answer == null) { return ""; }
+			answer = answer.Trim();
+			answer = answer.ToUpper();
+			return answer;
 		}
     }
 }
