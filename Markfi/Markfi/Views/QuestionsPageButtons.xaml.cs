@@ -145,12 +145,45 @@ namespace Markfi.Views
 			await Navigation.PushAsync(new EndOfQuizPage());
 		}
 
+		/* ConvertAnswer() is a function that takes a string input and formats it correctly to be checked against an answer string. This method stops
+		 * correct answers being marked as incorrect if they have a space at the end of the string, for example. The process of ConvertAnswer() is as
+		 * follows:
+		 * 1. If the answer is empty, return the empty answer as there is not a string to work with.
+		 * 2. Else, trim the string of extra space and convert the entire answer to uppercase, then remove all punctuation from the string so if they
+		 *    forget a comma, for example, they still get the correct answer message.
+		 * 3. Return the new string */
 		public string ConvertAnswer(string answer)
 		{
-			if (answer == null) { return ""; }
+			if (String.IsNullOrEmpty(answer)) { return ""; }
 			answer = answer.Trim();
 			answer = answer.ToUpper();
-			return answer;
+
+			string returnvalue = String.Empty;
+
+			// Checking if the input is an integer and not removing non-characters if so
+			if (Int32.TryParse(answer, out int number) == true) { return answer; }
+
+			foreach (char c in answer)
+			{
+				if (!char.IsPunctuation(c)) { returnvalue += c;}
+			}
+
+			return ConvertToInt(returnvalue);
 		}
+
+
+		/* ConvertToInt converts a string from a worded number to an integer. It has only been implemented for the given answers.
+		 * For example, "seven" will return "7" which is the correct answer in the answer class. */
+		public string ConvertToInt(string answer)
+		{
+			if (answer == "SEVEN") { return "7"; }
+            if (answer == "TWENTY FOUR") { return "24"; }
+			if (answer == "THOUSAND" || answer == "ONE THOUSAND") { return "1000"; }
+			if (answer == "THREE") { return "3"; }
+			if (answer == "THIRTEEN") { return "13"; }
+			if (answer == "EIGHT") { return "8"; }
+			if (answer == "2" && QuestionString.Contains("What is the name of Walter and Skylar's second child in Breaking Bad?")) { return "2 YEARS"; }
+			return answer;
+        }
     }
 }

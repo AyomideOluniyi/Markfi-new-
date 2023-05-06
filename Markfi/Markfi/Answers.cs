@@ -9,7 +9,7 @@ namespace Markfi
         public static string[] Under10s =
         {
             "Milky Way",
-            "Seven",
+            "7",
             "Heart",
             "24",
             "Bear",
